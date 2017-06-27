@@ -11,7 +11,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import br.com.calderani.metrorecyclerviewer.API.APIUtils;
 import br.com.calderani.metrorecyclerviewer.Model.Metro;
 import br.com.calderani.metrorecyclerviewer.R;
 
