@@ -4,10 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.calderani.metrorecyclerviewer.adapter.OnItemClickListener;
 import br.com.calderani.metrorecyclerviewer.api.APIUtils;
 import br.com.calderani.metrorecyclerviewer.api.MetroAPI;
 import br.com.calderani.metrorecyclerviewer.adapter.MetroAdapter;
@@ -26,7 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        metroAdapter = new MetroAdapter(new ArrayList<Metro>());
+        metroAdapter = new MetroAdapter(
+                new ArrayList<Metro>(),
+                new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Metro item) {
+                        Toast.makeText(getApplicationContext(), item.getCor(), Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
 
         rvMetros = (RecyclerView) findViewById(R.id.rvMetros);
         rvMetros.setLayoutManager(new LinearLayoutManager(this));

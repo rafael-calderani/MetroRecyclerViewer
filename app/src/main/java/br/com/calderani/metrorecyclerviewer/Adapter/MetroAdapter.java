@@ -18,10 +18,14 @@ import br.com.calderani.metrorecyclerviewer.R;
  * Created by logonrm on 26/06/2017.
  */
 
-public class MetroAdapter extends RecyclerView.Adapter<MetroAdapter.MetroViewHolder> {
+public class MetroAdapter extends RecyclerView.Adapter<MetroAdapter.MetroViewHolder>
+    implements OnItemClickListener {
     private List<Metro> metroList;
-    public MetroAdapter(List<Metro> l){
+    private OnItemClickListener listener;
+    public MetroAdapter(List<Metro> l, OnItemClickListener listener)
+    {
         metroList = l;
+        this.listener = listener;
     }
 
     @Override
@@ -33,10 +37,16 @@ public class MetroAdapter extends RecyclerView.Adapter<MetroAdapter.MetroViewHol
     }
 
     @Override
-    public void onBindViewHolder(MetroViewHolder holder, int position) {
+    public void onBindViewHolder(MetroViewHolder holder, final int position) {
         Metro m = metroList.get(position);
         holder.tvCor.setText(m.getCor());
         holder.tvNumero.setText(m.getNumero());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(metroList.get(position));
+            }
+        });
         Picasso.with(holder.itemView.getContext())
                 .load(m.getUrlImagem())
                 .placeholder(R.mipmap.ic_launcher)    // IMG de Loading
@@ -47,6 +57,11 @@ public class MetroAdapter extends RecyclerView.Adapter<MetroAdapter.MetroViewHol
     @Override
     public int getItemCount() {
         return metroList.size();
+    }
+
+    @Override
+    public void onItemClick(Metro item) {
+
     }
 
     public class MetroViewHolder extends RecyclerView.ViewHolder {
