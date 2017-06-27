@@ -1,4 +1,4 @@
-package br.com.calderani.metrorecyclerviewer.Adapter;
+package br.com.calderani.metrorecyclerviewer.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import br.com.calderani.metrorecyclerviewer.Model.Metro;
+import br.com.calderani.metrorecyclerviewer.model.Metro;
 import br.com.calderani.metrorecyclerviewer.R;
 
 /**

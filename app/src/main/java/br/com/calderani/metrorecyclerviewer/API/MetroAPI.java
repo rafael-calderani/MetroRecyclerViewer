@@ -1,8 +1,8 @@
-package br.com.calderani.metrorecyclerviewer.API;
+package br.com.calderani.metrorecyclerviewer.api;
 
 import java.util.List;
 
-import br.com.calderani.metrorecyclerviewer.Model.Metro;
+import br.com.calderani.metrorecyclerviewer.model.Metro;
 import retrofit2.Call;
 import retrofit2.http.GET;
 

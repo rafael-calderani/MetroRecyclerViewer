@@ -1,6 +1,6 @@
-package br.com.calderani.metrorecyclerviewer.Model;
+package br.com.calderani.metrorecyclerviewer.model;
 
-import br.com.calderani.metrorecyclerviewer.API.APIUtils;
+import br.com.calderani.metrorecyclerviewer.api.APIUtils;
 
 /**
  * Created by logonrm on 26/06/2017.

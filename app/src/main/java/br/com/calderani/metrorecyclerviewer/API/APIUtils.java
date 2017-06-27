@@ -1,4 +1,4 @@
-package br.com.calderani.metrorecyclerviewer.API;
+package br.com.calderani.metrorecyclerviewer.api;
 
 /**
  * Created by logonrm on 26/06/2017.

@@ -1,4 +1,4 @@
-package br.com.calderani.metrorecyclerviewer.API;
+package br.com.calderani.metrorecyclerviewer.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

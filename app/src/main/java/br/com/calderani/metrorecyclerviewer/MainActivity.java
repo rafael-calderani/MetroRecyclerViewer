@@ -8,10 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.calderani.metrorecyclerviewer.API.APIUtils;
-import br.com.calderani.metrorecyclerviewer.API.MetroAPI;
-import br.com.calderani.metrorecyclerviewer.Adapter.MetroAdapter;
-import br.com.calderani.metrorecyclerviewer.Model.Metro;
+import br.com.calderani.metrorecyclerviewer.api.APIUtils;
+import br.com.calderani.metrorecyclerviewer.api.MetroAPI;
+import br.com.calderani.metrorecyclerviewer.adapter.MetroAdapter;
+import br.com.calderani.metrorecyclerviewer.model.Metro;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
